@@ -31,8 +31,10 @@ jobs:
           context: .
           push: true
           tags: |
-             ghcr.io/${{ github.repository_owner }}/nextjs-devops-assessment:latest
-             ghcr.io/${{ github.repository_owner }}/nextjs-devops-assessment:${{ github.sha }}
+             tags: |
+               ghcr.io/iqrannaktare04/nextjs-devops-assessment:latest
+               ghcr.io/iqrannaktare04/nextjs-devops-assessment:${{ github.sha }}
+
 
 
      
