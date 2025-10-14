@@ -25,17 +25,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: |
-             tags: |
-               ghcr.io/iqrannaktare04/nextjs-devops-assessment:latest
-               ghcr.io/iqrannaktare04/nextjs-devops-assessment:${{ github.sha }}
-
-
-
-     
-            
+          tags: ghcr.io/iqrannaktare04/nextjs-devops-assessment:latest,ghcr.io/iqrannaktare04/nextjs-devops-assessment:${{ github.sha }}
